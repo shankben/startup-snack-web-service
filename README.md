@@ -1,4 +1,4 @@
-# Startup Snack | Simple Load Balaned Web Service using Ruby on Rails
+# Startup Snack: Simple Load-Balaned Web Service using Ruby on Rails
 
 ![Architecture](architecture.svg)
 
