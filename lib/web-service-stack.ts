@@ -73,8 +73,12 @@ export default class WebServiceStack extends Stack {
     *
     * @see: https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_aws-ec2.Vpc.html
     */
-    // const vpc = new Vpc(this, "Vpc", { maxAzs: 2 });
-    const vpc = Vpc.fromLookup(this, "Vpc", { isDefault: true });
+    // const vpc = new Vpc(this, "Vpc", {
+    //   maxAzs: 2
+    // });
+    const vpc = Vpc.fromLookup(this, "Vpc", {
+      isDefault: true
+    });
 
     /**
     * Select a private subnet group for RDS.
@@ -83,7 +87,7 @@ export default class WebServiceStack extends Stack {
     */
     const subnetGroup = new SubnetGroup(this, "SubnetGroup", {
       vpc,
-      description: "Subnet Group for ThreeTierWebApp",
+      description: "Subnet Group for StartupSnack-WebService",
       vpcSubnets: vpc.selectSubnets({
         onePerAz: true,
         subnetType: SubnetType.PRIVATE
