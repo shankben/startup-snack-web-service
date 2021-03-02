@@ -1,6 +1,6 @@
 import "source-map-support/register";
 import { App } from "@aws-cdk/core";
-import WebServiceStack from "../lib/stacks/web-service-stack";
+import WebServiceStack from "../lib/web-service-stack";
 
 async function main() {
   const app = new App();
