@@ -117,7 +117,7 @@ export default class WebServiceStack extends Stack {
     });
 
     /**
-    * Alternatively construct an RDS Aurora Serverless for PostegreSQL cluster.
+    * Alternatively construct a maanged RDS for PostegreSQL instance.
     *
     * @see: https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_aws-rds.DatabaseInstance.html
     */
