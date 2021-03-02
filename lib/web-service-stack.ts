@@ -48,7 +48,7 @@ export default class WebServiceStack extends Stack {
 
   private readonly assetPath = path.join(__dirname, "..", "assets", "ecs");
 
-  private rdsSecret = (name: string) => EcsSecret.fromSecretsManager(
+  private rdsSecretFor = (name: string) => EcsSecret.fromSecretsManager(
     this.databaseCluster.secret!,
     name
   );
@@ -176,8 +176,8 @@ export default class WebServiceStack extends Stack {
           })
         }),
         secrets: {
-          DATABASE_HOST: this.rdsSecret("host"),
-          DATABASE_PASSWORD: this.rdsSecret("password")
+          DATABASE_HOST: this.rdsSecretFor("host"),
+          DATABASE_PASSWORD: this.rdsSecretFor("password")
         }
       }
     });
