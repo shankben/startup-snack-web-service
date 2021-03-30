@@ -1,1 +1,1 @@
-rm -rf cdk.out dist
+rm -rf cdk.context.json cdk.out dist

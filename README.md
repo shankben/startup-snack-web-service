@@ -1,6 +1,6 @@
-# CDK Template
+# Startup Snack | Simple Load Balaned Web Service using Ruby on Rails
 
-<!-- ![Architecture](architecture.svg) -->
+![Architecture](architecture.svg)
 
 ## Setup
 
@@ -8,6 +8,7 @@
   2. Install local Node.js dependencies: `npm install`
   3. Build the project: `npm run build`
   4. Bootstrap the CDK Toolkit into your AWS account: `cdk bootstrap`
+  5. Deploy the stack: `cdk deploy`
 
 ## Useful Commands
 
@@ -18,3 +19,4 @@
   * `cdk deploy` deploy this stack to your default AWS account/region
   * `cdk diff` compare deployed stack with current state
   * `cdk synth` emits the synthesized CloudFormation template
+  * `cdk destroy` delete this stack and its resources from AWS

@@ -1,6 +1,7 @@
 import "source-map-support/register";
 import { App } from "@aws-cdk/core";
-import Template from "../lib/stacks/TemplateStack";
+import WebServiceStack from "../lib/web-service-stack";
+
 
 async function main() {
   const app = new App();
@@ -10,10 +11,10 @@ async function main() {
       region: process.env.AWS_REGION ??
         process.env.CDK_DEPLOY_REGION ??
         process.env.CDK_DEFAULT_REGION ??
-        "us-east-1"
+        "us-east-2"
     }
   };
-  new Template(app, "Template", props);
+  new WebServiceStack(app, "StartupSnack-WebService", props);
 }
 
 main().catch(console.error);

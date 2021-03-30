@@ -26,11 +26,10 @@
     "src/**/*.ts",
     "lib/**/*.ts",
     "secrets/*",
-    "assets/lambda/**/*.ts"
   ],
   "exclude": [
     "dist",
     "cdk.out",
-    "assets/fargate/**"
+    "assets/ecs/**"
   ]
 }
